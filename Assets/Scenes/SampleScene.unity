@@ -398,6 +398,104 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1311272836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311272840}
+  - component: {fileID: 1311272839}
+  - component: {fileID: 1311272838}
+  - component: {fileID: 1311272837}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1311272837
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311272836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1311272838
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311272836}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1311272839
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311272836}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1311272840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311272836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.47, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494086134
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +545,9 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1151521235}
+    - {fileID: 1822023750}
+    - {fileID: 1311272836}
+    - {fileID: 1699179729}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -454,56 +555,48 @@ MonoBehaviour:
     SerializationNodes:
     - Name: rootNode
       Entry: 7
-      Data: 0|BehaviorTree.Sequence, Assembly-CSharp
+      Data: 0|BehaviorTree.Selector, Assembly-CSharp
     - Name: NodeName
       Entry: 1
-      Data: "\u987A\u5E8F\u6839\u8282\u70B9"
+      Data: "\u9009\u62E9\u8282\u70B9"
     - Name: ChildNodes
       Entry: 7
       Data: 1|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 2|BehaviorTree.So, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u6761\u4EF61\u2014\u2014\u65B9\u5757"
+    - Name: ChildNode
+      Entry: 7
+      Data: 3|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u95EA\u70C11"
+    - Name: ChildNodes
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 2|BehaviorTree.Delay, Assembly-CSharp
+      Data: 5|BehaviorTree.Delay, Assembly-CSharp
     - Name: NodeName
       Entry: 1
-      Data: "\u8BA1\u65F6\u56681"
+      Data: "\u5EF6\u65F61"
     - Name: ChildNode
       Entry: 7
-      Data: 3|BehaviorTree.SetObjectActive, Assembly-CSharp
+      Data: 6|BehaviorTree.SetObjectActive, Assembly-CSharp
     - Name: NodeName
       Entry: 1
-      Data: "\u7981\u7528Cube"
-    - Name: m_IsActive
-      Entry: 5
-      Data: false
-    - Name: m_Particle
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timer
-      Entry: 4
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|BehaviorTree.Delay, Assembly-CSharp
-    - Name: NodeName
-      Entry: 1
-      Data: "\u8BA1\u65F6\u56682"
-    - Name: ChildNode
-      Entry: 7
-      Data: 5|BehaviorTree.SetObjectActive, Assembly-CSharp
-    - Name: NodeName
-      Entry: 1
-      Data: "\u542F\u7528Cube"
+      Data: "\u542F\u7528"
     - Name: m_IsActive
       Entry: 5
       Data: true
@@ -513,9 +606,36 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: timer
+    - Name: m_Timer
       Entry: 4
-      Data: 2
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u5EF6\u65F62"
+    - Name: ChildNode
+      Entry: 7
+      Data: 8|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u7981\u7528"
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: m_Particle
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -528,3 +648,465 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|BehaviorTree.So, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u6761\u4EF62\u2014\u2014\u7403"
+    - Name: ChildNode
+      Entry: 7
+      Data: 10|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u95EA\u70C12"
+    - Name: ChildNodes
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 12|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: ChildNode
+      Entry: 7
+      Data: 13|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: m_Particle
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: ChildNode
+      Entry: 7
+      Data: 15|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: m_Particle
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|BehaviorTree.So, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u6761\u4EF63\u2014\u2014\u80F6\u56CA"
+    - Name: ChildNode
+      Entry: 7
+      Data: 17|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u95EA\u70C13"
+    - Name: ChildNodes
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 19|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: ChildNode
+      Entry: 7
+      Data: 20|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: m_Particle
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: ChildNode
+      Entry: 7
+      Data: 22|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: m_Particle
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: NodeName
+      Entry: 1
+      Data: "\u95EA\u70C12"
+    - Name: ChildNodes
+      Entry: 7
+      Data: 24|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 25|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: ChildNode
+      Entry: 7
+      Data: 26|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: m_Particle
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 27|BehaviorTree.Delay, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: ChildNode
+      Entry: 7
+      Data: 28|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: NodeName
+      Entry: 6
+      Data: 
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: m_Particle
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!1 &1699179729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699179733}
+  - component: {fileID: 1699179732}
+  - component: {fileID: 1699179731}
+  - component: {fileID: 1699179730}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1699179730
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699179729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1699179731
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699179729}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1699179732
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699179729}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1699179733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699179729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.87, y: -1.9787076, z: 0.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1822023750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822023754}
+  - component: {fileID: 1822023753}
+  - component: {fileID: 1822023752}
+  - component: {fileID: 1822023751}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1822023751
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822023750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1822023752
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822023750}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1822023753
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822023750}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1822023754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822023750}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

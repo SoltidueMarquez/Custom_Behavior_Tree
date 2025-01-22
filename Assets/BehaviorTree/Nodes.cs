@@ -44,21 +44,52 @@ namespace BehaviorTree
     }
     
     /// <summary>
+    /// 选择节点
+    /// </summary>
+    public class Selector : BtComposite
+    {
+        [LabelText("选择的index"), FoldoutGroup("@NodeName")]
+        private int m_SelectIndex;
+        
+        public override BehaviourState Tick()
+        {
+            var state = ChildNodes[m_SelectIndex].Tick();//运行当前的选择节点
+            switch (state)
+            {
+                case BehaviourState.成功:
+                    m_SelectIndex = 0;
+                    return state;
+                case BehaviourState.失败:
+                    m_SelectIndex++;                        //继续执行下一个节点
+                    if (m_SelectIndex >= ChildNodes.Count)  //如果所有的节点都失败则返回失败
+                    {
+                        m_SelectIndex = 0;                  //从头开始
+                        return BehaviourState.失败;
+                    }
+                    break;
+                default:
+                    return state;
+            }
+            return BehaviourState.失败;
+        }
+    }
+    
+    /// <summary>
     /// 延时执行节点
     /// 使用计时器，计时器超过时返回成功
     /// </summary>
     public class Delay : BtPrecondition
     {
         [LabelText("延时"), SerializeField, FoldoutGroup("@NodeName")]
-        private float timer;
+        private float m_Timer;
 
-        private float _currentTimer;
+        private float m_CurrentTimer;
         public override BehaviourState Tick()
         {
-            _currentTimer += Time.deltaTime;
-            if (_currentTimer>=timer)
+            m_CurrentTimer += Time.deltaTime;
+            if (m_CurrentTimer >= m_Timer) 
             {
-                _currentTimer = 0f;
+                m_CurrentTimer = 0f;
                 ChildNode.Tick();
                 return BehaviourState.成功;
             }
@@ -82,6 +113,23 @@ namespace BehaviorTree
             m_Particle.SetActive(m_IsActive);
             Debug.Log($"{NodeName}节点 {(m_IsActive ? "启用了" : "禁用了")}");
             return BehaviourState.成功;
+        }
+    }
+
+    /// <summary>
+    /// 判定节点
+    /// </summary>
+    public class So : BtPrecondition
+    {
+        [LabelText("是否Active"), SerializeField, FoldoutGroup("@NodeName")]
+        private bool m_IsActive;
+        public override BehaviourState Tick()
+        {
+            if (m_IsActive)//如果为真则执行子节点
+            {
+                return ChildNode.Tick();
+            }
+            return BehaviourState.失败;
         }
     }
 }
