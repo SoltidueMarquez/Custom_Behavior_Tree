@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bbbbec5-fbe6-4d77-a50b-8c82f32e6ca1" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/View/InspectorView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/View/InspectorView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/View/TreeView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/View/TreeView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Custom_Behavior_Tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Custom_Behavior_Tree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTree/Nodes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTree/Nodes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +15,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/BehaviourTree/BehaviourTreeNode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/InspectorView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/TreeView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/View/SplitView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,6 +92,10 @@
       <updated>1737449928085</updated>
       <workItem from="1737449933338" duration="1410000" />
       <workItem from="1737528252604" duration="2446000" />
+      <workItem from="1737720054325" duration="2774000" />
+      <workItem from="1737723121687" duration="445000" />
+      <workItem from="1737723583117" duration="29000" />
+      <workItem from="1737723639909" duration="1958000" />
     </task>
     <servers />
   </component>
