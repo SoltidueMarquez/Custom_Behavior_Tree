@@ -1,4 +1,5 @@
 ﻿using System;
+using BehaviorTree;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -43,8 +44,10 @@ namespace Editor.View
         /// <param name="obj"></param>
         private void CreateNode(Type type, Vector2 position)
         {
-            var node = new Node();
-            node.title = type.Name;
+            BtNodeBase nodeData = Activator.CreateInstance(type) as BtNodeBase;//使用反射创建对应节点单例
+            nodeData.NodeName = type.Name;
+            
+            var node = new NodeView(nodeData);
             node.SetPosition(new Rect(position, Vector2.one));
             this.AddElement(node);
         }

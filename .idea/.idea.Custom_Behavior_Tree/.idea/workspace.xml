@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6bbbbec5-fbe6-4d77-a50b-8c82f32e6ca1" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Custom_Behavior_Tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Custom_Behavior_Tree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/View/BehaviorTreeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/View/BehaviorTreeWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/View/TreeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/View/TreeView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,9 +13,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/BehaviourTree/BehaviourTreeNode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/EditorExTools/EditorExTools.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/BehaviourTreeView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/BehaviourTreeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/InspectorView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/TreeView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/Editor/View/TreeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../DeskTop/BehaviorTreeDisplay/jlbehavior-tree/Assets/JLBehaviourTree/ExTools/ExTool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/View/SplitView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -28,24 +27,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Maugham\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Maugham\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Maugham\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Maugham\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Maugham\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Maugham\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\unityhub\2021.3.21f1c1\Editor\Unity.exe" />
@@ -99,6 +98,7 @@
       <workItem from="1737723583117" duration="29000" />
       <workItem from="1737723639909" duration="1958000" />
       <workItem from="1737788363878" duration="3118000" />
+      <workItem from="1737876437164" duration="1905000" />
     </task>
     <servers />
   </component>
