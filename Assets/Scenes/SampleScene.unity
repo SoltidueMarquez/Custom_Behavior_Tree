@@ -556,6 +556,21 @@ MonoBehaviour:
     - Name: rootNode
       Entry: 7
       Data: 0|BehaviorTree.Selector, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 165.77533
+    - Name: 
+      Entry: 4
+      Data: -137.333313
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u9009\u62E9\u8282\u70B9"
@@ -569,12 +584,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 2|BehaviorTree.So, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -151.33342
+    - Name: 
+      Entry: 4
+      Data: 52.0000153
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u6761\u4EF61\u2014\u2014\u65B9\u5757"
     - Name: ChildNode
       Entry: 7
       Data: 3|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 202.66658
+    - Name: 
+      Entry: 4
+      Data: -277.853729
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u95EA\u70C11"
@@ -588,12 +633,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 5|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -575.0327
+    - Name: 
+      Entry: 4
+      Data: -19.3333321
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u5EF6\u65F61"
     - Name: ChildNode
       Entry: 7
       Data: 6|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -242.666687
+    - Name: 
+      Entry: 4
+      Data: 230.666687
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u542F\u7528"
@@ -615,12 +690,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 7|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -242.666733
+    - Name: 
+      Entry: 4
+      Data: -176.666687
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u5EF6\u65F62"
     - Name: ChildNode
       Entry: 7
       Data: 8|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -341.666656
+    - Name: 
+      Entry: 4
+      Data: -98
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u7981\u7528"
@@ -657,12 +762,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 9|BehaviorTree.So, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -310.666748
+    - Name: 
+      Entry: 4
+      Data: 339.333282
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u6761\u4EF62\u2014\u2014\u7403"
     - Name: ChildNode
       Entry: 7
       Data: 10|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 187.999954
+    - Name: 
+      Entry: 4
+      Data: 486.68
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u95EA\u70C12"
@@ -676,12 +811,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 12|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -456.08
+    - Name: 
+      Entry: 4
+      Data: 191.333344
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
     - Name: ChildNode
       Entry: 7
       Data: 13|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -293.3333
+    - Name: 
+      Entry: 4
+      Data: 39.3333
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
@@ -703,12 +868,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 14|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -59.9999
+    - Name: 
+      Entry: 4
+      Data: -162.733612
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
     - Name: ChildNode
       Entry: 7
       Data: 15|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -31.3333015
+    - Name: 
+      Entry: 4
+      Data: 205.333344
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
@@ -745,12 +940,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 16|BehaviorTree.So, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 5.3333
+    - Name: 
+      Entry: 4
+      Data: 378.697876
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u6761\u4EF63\u2014\u2014\u80F6\u56CA"
     - Name: ChildNode
       Entry: 7
       Data: 17|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 578.759949
+    - Name: 
+      Entry: 4
+      Data: 91.33333
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u95EA\u70C13"
@@ -764,12 +989,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 19|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 122.666595
+    - Name: 
+      Entry: 4
+      Data: -47.746666
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
     - Name: ChildNode
       Entry: 7
       Data: 20|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -196.192749
+    - Name: 
+      Entry: 4
+      Data: -48
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
@@ -791,12 +1046,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 21|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 214
+    - Name: 
+      Entry: 4
+      Data: 284
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
     - Name: ChildNode
       Entry: 7
       Data: 22|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -127.999924
+    - Name: 
+      Entry: 4
+      Data: 284
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
@@ -833,6 +1118,21 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 23|BehaviorTree.Sequence, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 321
+    - Name: 
+      Entry: 4
+      Data: -58.4933357
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 1
       Data: "\u95EA\u70C12"
@@ -846,12 +1146,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 25|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 436.377716
+    - Name: 
+      Entry: 4
+      Data: 244.666718
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
     - Name: ChildNode
       Entry: 7
       Data: 26|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -128.000092
+    - Name: 
+      Entry: 4
+      Data: 152.000015
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
@@ -873,12 +1203,42 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 27|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 294
+    - Name: 
+      Entry: 4
+      Data: 91.6666641
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 
     - Name: ChildNode
       Entry: 7
       Data: 28|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 6
+      Data: 
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 86
+    - Name: 
+      Entry: 4
+      Data: 152.266663
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: NodeName
       Entry: 6
       Data: 

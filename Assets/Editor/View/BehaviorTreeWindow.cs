@@ -13,6 +13,8 @@ namespace Editor.View
     {
         public static BehaviorTreeWindow windowRoot;//创建单例用于获取窗口位置信息
 
+        public TreeView treeView;
+
         /// <summary>
         /// 将ShowExample方法放在菜单栏地址下,
         /// _%#&表示快捷键，%为ctrl，#为shift，&为alt
@@ -28,6 +30,9 @@ namespace Editor.View
         /// </summary>
         public void CreateGUI()
         {
+            var id = BTSetting.GetSetting().TreeID;//获取树的ID用于加载树
+            var iGetBt = EditorUtility.InstanceIDToObject(id) as IGetBt;
+            
             windowRoot = this;
             var root = rootVisualElement;
             //使用组件添加树视图，并克隆到视窗中
@@ -35,6 +40,55 @@ namespace Editor.View
             //新建一个Label组件并附加样式代码
             var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/View/BehaviorTreeWindow.uss");
             visualTree.CloneTree(root);
+
+            treeView = root.Q<TreeView>();//获取树的视图
+            if (iGetBt == null) return;//非空判定
+            if (iGetBt.GetRoot() == null) return;
+            CreateRoot(iGetBt.GetRoot());//创建树的节点
+        }
+
+        /// <summary>
+        /// 通过创建根节点创建树
+        /// </summary>
+        /// <param name="rootNode"></param>
+        public void CreateRoot(BtNodeBase rootNode)
+        {
+            if (rootNode == null) return;
+            NodeView nodeView = new NodeView(rootNode);//创建一个节点
+            nodeView.SetPosition(new Rect(rootNode.Position, Vector2.one));//设置位置
+            treeView.AddElement(nodeView);
+            
+            //view.NodeViews.Add(rootNode.Guid,nodeView);
+            switch (rootNode)//向下遍历所有的子节点生成出来
+            {
+                case BtComposite composite:
+                    composite.ChildNodes.ForEach(CreateChild);
+                    break;
+                case BtPrecondition precondition:
+                    CreateChild(precondition.ChildNode);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 创建子节点视图方法
+        /// </summary>
+        /// <param name="nodeData"></param>
+        public void CreateChild(BtNodeBase nodeData)
+        {
+            if (nodeData == null) return;
+            NodeView nodeView = new NodeView(nodeData);//创建一个节点
+            nodeView.SetPosition(new Rect(nodeData.Position, Vector2.one));//设置位置
+            treeView.AddElement(nodeView);
+            switch (nodeData)//向下遍历所有的子节点生成出来
+            {
+                case BtComposite composite:
+                    composite.ChildNodes.ForEach(CreateChild);
+                    break;
+                case BtPrecondition precondition:
+                    CreateChild(precondition.ChildNode);
+                    break;
+            }
         }
     }
 

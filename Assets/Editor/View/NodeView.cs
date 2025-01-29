@@ -1,5 +1,6 @@
 using BehaviorTree;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
 namespace Editor.View
 {
@@ -13,7 +14,7 @@ namespace Editor.View
         public NodeView(BtNodeBase nodeData)
         {
             this.NodeData = nodeData;
-            InitNodeView(nodeData);
+            InitNodeView(nodeData);//初始化创建的节点
         }
 
         public void InitNodeView(BtNodeBase nodeData)
@@ -21,10 +22,23 @@ namespace Editor.View
             title = nodeData.NodeName;//赋值标题
             //对应三种节点创建节点端口
             InputPort = +this;
-            OutputPort = this - (nodeData is BtPrecondition);
-            //将端口添加
             inputContainer.Add(InputPort);
-            outputContainer.Add(OutputPort);
+
+            if (nodeData is not BtActionNode)
+            {
+                OutputPort = this - (nodeData is BtPrecondition);
+                outputContainer.Add(OutputPort);
+            }
+        }
+
+        /// <summary>
+        /// 设置节点的位置
+        /// </summary>
+        /// <param name="newPos"></param>
+        public override void SetPosition(Rect newPos)
+        {
+            base.SetPosition(newPos);
+            NodeData.Position = new Vector2(newPos.xMin, newPos.yMin);
         }
 
         #region 创建连线端口

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace BehaviorTree
 {
@@ -16,6 +17,8 @@ namespace BehaviorTree
     /// </summary>
     public abstract class BtNodeBase
     {
+        [FoldoutGroup("@NodeName"), LabelText("唯一标识")] public string Guid;
+        [FoldoutGroup("@NodeName"), LabelText("节点位置")] public Vector2 Position;
         [FoldoutGroup("@NodeName"), LabelText("名称")] public string NodeName;
         
         /// <summary>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using BehaviorTree;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -64,6 +66,20 @@ namespace Editor.View
             {
                 SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), menuWindowProvider);
             };
+        }
+        
+        /// <summary>
+        /// 覆写GetCompatiblePorts 定义链接规则
+        /// 筛选条件是两个端口类型不同，且不是自身
+        /// </summary>
+        /// <param name="startAnchor"></param>
+        /// <param name="nodeAdapter"></param>
+        /// <returns>返回所有能连接的端口</returns>
+        public override List<Port> GetCompatiblePorts(Port startAnchor, NodeAdapter nodeAdapter)
+        {
+            return ports.Where(endPorts => 
+                    endPorts.direction != startAnchor.direction && endPorts.node != startAnchor.node)
+                .ToList();
         }
         
         /// <summary>
