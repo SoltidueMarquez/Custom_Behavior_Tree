@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using BehaviorTree;
+using Sirenix.Utilities;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -45,6 +47,8 @@ namespace Editor.View
             if (iGetBt == null) return;//非空判定
             if (iGetBt.GetRoot() == null) return;
             CreateRoot(iGetBt.GetRoot());//创建树的节点
+            //在所有节点创建完毕后开始连线，调用所有的节点连接自己的子集
+            treeView.nodes.OfType<NodeView>().ForEach(n => n.LinkLine());
         }
 
         /// <summary>
@@ -57,8 +61,7 @@ namespace Editor.View
             NodeView nodeView = new NodeView(rootNode);//创建一个节点
             nodeView.SetPosition(new Rect(rootNode.Position, Vector2.one));//设置位置
             treeView.AddElement(nodeView);
-            
-            //view.NodeViews.Add(rootNode.Guid,nodeView);
+            treeView.NodeViews.Add(rootNode.Guid, nodeView);//添加进字典
             switch (rootNode)//向下遍历所有的子节点生成出来
             {
                 case BtComposite composite:
@@ -80,6 +83,7 @@ namespace Editor.View
             NodeView nodeView = new NodeView(nodeData);//创建一个节点
             nodeView.SetPosition(new Rect(nodeData.Position, Vector2.one));//设置位置
             treeView.AddElement(nodeView);
+            treeView.NodeViews.Add(nodeData.Guid, nodeView);//添加进字典
             switch (nodeData)//向下遍历所有的子节点生成出来
             {
                 case BtComposite composite:

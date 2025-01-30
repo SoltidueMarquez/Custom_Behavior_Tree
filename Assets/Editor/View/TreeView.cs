@@ -14,6 +14,7 @@ namespace Editor.View
     /// </summary>
     public class TreeView : GraphView
     {
+        public Dictionary<string, NodeView> NodeViews = new Dictionary<string, NodeView>();//以节点id为索引的节点存储字典，方便查找
         public new class UxmlFactory : UxmlFactory<TreeView,UxmlTraits> { }
         public TreeView()
         {
@@ -47,10 +48,11 @@ namespace Editor.View
         private void CreateNode(Type type, Vector2 position)
         {
             BtNodeBase nodeData = Activator.CreateInstance(type) as BtNodeBase;//使用反射创建对应节点单例
+            nodeData.Guid = System.Guid.NewGuid().ToString();//生成一个ID随机值
             nodeData.NodeName = type.Name;
-            
             var node = new NodeView(nodeData);
             node.SetPosition(new Rect(position, Vector2.one));
+            NodeViews.Add(nodeData.Guid, node);//添加进字典
             this.AddElement(node);
         }
         

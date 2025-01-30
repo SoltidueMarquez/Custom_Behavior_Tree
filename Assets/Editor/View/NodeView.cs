@@ -1,6 +1,7 @@
 using BehaviorTree;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Editor.View
 {
@@ -31,15 +32,36 @@ namespace Editor.View
             }
         }
 
-        /// <summary>
-        /// 设置节点的位置
-        /// </summary>
-        /// <param name="newPos"></param>
-        public override void SetPosition(Rect newPos)
+        #region 连线方法
+        public void LinkLine()
         {
-            base.SetPosition(newPos);
-            NodeData.Position = new Vector2(newPos.xMin, newPos.yMin);
+            var graphView = BehaviorTreeWindow.windowRoot.treeView;
+            switch (NodeData)
+            {
+                case BtComposite composite: 
+                    composite.ChildNodes.ForEach(n =>
+                    {
+                        PortLink(OutputPort, graphView.NodeViews[n.Guid].InputPort);
+                    });
+                    break;
+                case BtPrecondition precondition:
+                    PortLink(OutputPort, graphView.NodeViews[precondition.ChildNode.Guid].InputPort);
+                    break;
+            }
         }
+
+        public static Edge PortLink(Port p1, Port p2)
+        {
+            var tempEdge = new Edge()
+            {
+                output = p1,
+                input = p2
+            };
+            tempEdge?.input.Connect(tempEdge);
+            tempEdge?.output.Connect(tempEdge);
+            return tempEdge;
+        }
+        #endregion
 
         #region 创建连线端口
         public static Port operator +(NodeView view)
@@ -56,6 +78,28 @@ namespace Editor.View
             return port;
         }
         #endregion
+
+        /// <summary>
+        /// 在右键菜单时会调用的
+        /// </summary>
+        /// <param name="evt"></param>
+        public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
+        {
+            evt.menu.AppendAction("Set Root", SetRoot);//添加设置某个节点为根节点的方法
+        }
+
+        private void SetRoot(DropdownMenuAction obj) => BTSetting.GetSetting().SetRoot(NodeData);
+
+        /// <summary>
+        /// 设置节点的位置
+        /// </summary>
+        /// <param name="newPos"></param>
+        public override void SetPosition(Rect newPos)
+        {
+            base.SetPosition(newPos);
+            NodeData.Position = new Vector2(newPos.xMin, newPos.yMin);
+        }
+
     }
 
     public enum PortType

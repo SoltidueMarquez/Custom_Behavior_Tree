@@ -24,10 +24,16 @@ namespace BehaviorTree
         }
 #endif
         public BtNodeBase GetRoot() => rootNode;
+        public void SetRoot(BtNodeBase rootData) => rootNode = rootData;
+
     }
     
+    /// <summary>
+    /// 行为树节点信息获取接口
+    /// </summary>
     public interface IGetBt
     {
         BtNodeBase GetRoot();
+        void SetRoot(BtNodeBase rootData);
     }
 }
