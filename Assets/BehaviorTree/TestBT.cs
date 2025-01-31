@@ -33,7 +33,7 @@ namespace BehaviorTree
     /// </summary>
     public interface IGetBt
     {
-        BtNodeBase GetRoot();
-        void SetRoot(BtNodeBase rootData);
+        BtNodeBase GetRoot();//获取根节点
+        void SetRoot(BtNodeBase rootData);//设置根节点
     }
 }

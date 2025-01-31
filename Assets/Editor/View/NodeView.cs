@@ -38,14 +38,14 @@ namespace Editor.View
             var graphView = BehaviorTreeWindow.windowRoot.treeView;
             switch (NodeData)
             {
-                case BtComposite composite: 
+                case BtComposite composite: //复合节点将所有子节点都连线
                     composite.ChildNodes.ForEach(n =>
                     {
-                        PortLink(OutputPort, graphView.NodeViews[n.Guid].InputPort);
+                        graphView.AddElement(PortLink(OutputPort, graphView.NodeViews[n.Guid].InputPort));
                     });
                     break;
-                case BtPrecondition precondition:
-                    PortLink(OutputPort, graphView.NodeViews[precondition.ChildNode.Guid].InputPort);
+                case BtPrecondition precondition://条件节点于自己唯一的子节点连线
+                    graphView.AddElement(PortLink(OutputPort, graphView.NodeViews[precondition.ChildNode.Guid].InputPort));
                     break;
             }
         }

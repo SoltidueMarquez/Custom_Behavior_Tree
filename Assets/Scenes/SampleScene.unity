@@ -576,7 +576,64 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: 637f0a41-3f87-49ed-9336-bd80f7f1e2d9
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 182.666687
+    - Name: 
+      Entry: 4
+      Data: 176
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: Delay
+    - Name: ChildNode
+      Entry: 7
+      Data: 3|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: 3917aec9-e787-47f2-a2ff-5051691c41f2
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 391.333344
+    - Name: 
+      Entry: 4
+      Data: 295.666656
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: SetObjectActive
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: m_Particle
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

@@ -28,6 +28,37 @@ namespace Editor.View
             //应用统一样式
             styleSheets.Add(AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/View/BehaviorTreeWindow.uss"));
             GraphViewMenu();//将菜单放入
+
+            graphViewChanged += OnGraphViewChanged;//添加连线委托
+        }
+
+        /// <summary>
+        /// 视图控制回调函数，当视图改变时
+        /// </summary>
+        /// <param name="gvc"></param>
+        /// <returns></returns>
+        private GraphViewChange OnGraphViewChanged(GraphViewChange gvc)
+        {
+            if (gvc.edgesToCreate != null)//如果要创建线条的话
+            {
+                gvc.edgesToCreate.ForEach(edge =>
+                {
+                    edge.LinkLineAddData();
+                });
+            }
+
+            if (gvc.elementsToRemove != null)//如果要断开线的话
+            {
+                gvc.elementsToRemove.ForEach(ele =>
+                {
+                    if (ele is Edge edge)
+                    {
+                        edge.UnLinkLineDeleteData();
+                    }
+                });
+            }
+
+            return gvc;
         }
 
         /// <summary>

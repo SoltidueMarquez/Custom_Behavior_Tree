@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace BehaviorTree
 {
-    [CreateAssetMenu]
-    public class BTSetting : ScriptableObject
+    /// <summary>
+    /// 只需要存在一个单例，用于获取行为树的节点信息以便于在打开时构建视图
+    /// </summary>
+    public class BTSetting : SerializedScriptableObject
     {
         public int TreeID;
 
