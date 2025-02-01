@@ -30,6 +30,17 @@ namespace Editor.View
             GraphViewMenu();//将菜单放入
 
             graphViewChanged += OnGraphViewChanged;//添加连线委托
+            RegisterCallback<MouseEnterEvent>(MouseEnterControl);//为鼠标点击注册器添加订阅事件
+        }
+
+        /// <summary>
+        /// 每次鼠标点击就会触发这个方法
+        /// </summary>
+        /// <param name="evt"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        private void MouseEnterControl(MouseEnterEvent evt)
+        {
+            BehaviorTreeWindow.windowRoot.inspectorView.UpdateViewData();
         }
 
         /// <summary>

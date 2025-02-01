@@ -88,6 +88,15 @@ namespace Editor.View
             evt.menu.AppendAction("Set Root", SetRoot);//添加设置某个节点为根节点的方法
         }
 
+        /// <summary>
+        /// 节点被选择时调用的接口
+        /// </summary>
+        public override void OnSelected()
+        {
+            base.OnSelected();
+            BehaviorTreeWindow.windowRoot.inspectorView.UpdateViewData();//更新Inspector视图的数据
+        }
+
         private void SetRoot(DropdownMenuAction obj) => BTSetting.GetSetting().SetRoot(NodeData);
 
         /// <summary>

@@ -15,6 +15,8 @@ namespace BehaviorTree
     /// <summary>
     /// 行为树节点基类
     /// </summary>
+    [BoxGroup]
+    [HideReferenceObjectPicker]
     public abstract class BtNodeBase
     {
         [FoldoutGroup("@NodeName"), LabelText("唯一标识")] public string Guid;

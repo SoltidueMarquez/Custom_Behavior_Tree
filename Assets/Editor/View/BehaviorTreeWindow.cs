@@ -16,6 +16,7 @@ namespace Editor.View
         public static BehaviorTreeWindow windowRoot;//创建单例用于获取窗口位置信息
 
         public TreeView treeView;
+        public InspectorView inspectorView;
 
         /// <summary>
         /// 将ShowExample方法放在菜单栏地址下,
@@ -43,6 +44,7 @@ namespace Editor.View
             var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/View/BehaviorTreeWindow.uss");
             visualTree.CloneTree(root);
 
+            inspectorView = root.Q<InspectorView>();//获取Inspector的视图
             treeView = root.Q<TreeView>();//获取树的视图
             if (iGetBt == null) return;//非空判定
             if (iGetBt.GetRoot() == null) return;
