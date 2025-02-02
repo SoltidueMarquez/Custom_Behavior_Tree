@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +28,37 @@ MonoBehaviour:
         System.Core
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: a6a648d2-84e2-412d-b533-d95552faf955
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1377.6001
+    - Name: 
+      Entry: 4
+      Data: 264.0001
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u7403\u7403\u51FA\u73B0"
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: m_Particle
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

@@ -5,11 +5,11 @@ namespace BehaviorTree
 {
     public class TestBT : SerializedMonoBehaviour, IGetBt
     {
-        [OdinSerialize] public BtNodeBase rootNode;
+        [OdinSerialize] public BehaviorTreeData TreeData = new BehaviorTreeData();
 
         private void Update()
         {
-            rootNode?.Tick();
+            TreeData.rootNode?.Tick();
         }
         
 #if UNITY_EDITOR
@@ -23,8 +23,8 @@ namespace BehaviorTree
             UnityEditor.EditorApplication.ExecuteMenuItem("Tools/BehaviorTreeWindow");//打开对应菜单地址下的按钮
         }
 #endif
-        public BtNodeBase GetRoot() => rootNode;
-        public void SetRoot(BtNodeBase rootData) => rootNode = rootData;
+        public BehaviorTreeData GetTree() => TreeData;
+        public void SetRoot(BtNodeBase rootData) => TreeData.rootNode = rootData;
 
     }
     
@@ -33,7 +33,7 @@ namespace BehaviorTree
     /// </summary>
     public interface IGetBt
     {
-        BtNodeBase GetRoot();//获取根节点
+        BehaviorTreeData GetTree();//获取根节点
         void SetRoot(BtNodeBase rootData);//设置根节点
     }
 }

@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6bbbbec5-fbe6-4d77-a50b-8c82f32e6ca1" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Custom_Behavior_Tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Custom_Behavior_Tree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/View/BTEx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/View/BTEx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTree/BTNodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTree/BTNodeBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTree/Resources/InspectorViewData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTree/Resources/InspectorViewData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTree/TestBT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTree/TestBT.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/View/BehaviorTreeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/View/BehaviorTreeWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/View/NodeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/View/NodeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/View/TreeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/View/TreeView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,6 +116,7 @@
       <workItem from="1738305085779" duration="2699000" />
       <workItem from="1738408158397" duration="1736000" />
       <workItem from="1738464762917" duration="3423000" />
+      <workItem from="1738501723908" duration="3719000" />
     </task>
     <servers />
   </component>

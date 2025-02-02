@@ -5,6 +5,26 @@ using UnityEngine;
 namespace BehaviorTree
 {
     /// <summary>
+    /// 视图的位置、旋转、缩放等信息
+    /// </summary>
+    public class GraphViewTransform
+    {
+        public Vector3 position;
+        public Quaternion rotation;
+        public Vector3 scale;
+        public Matrix4x4 matrix;
+    }
+    
+    [BoxGroup]
+    [HideReferenceObjectPicker]
+    public class BehaviorTreeData
+    {
+        public BtNodeBase rootNode;
+        
+        public GraphViewTransform viewTransform = new GraphViewTransform();
+    }
+    
+    /// <summary>
     /// 节点状态枚举
     /// </summary>
     public enum BehaviourState

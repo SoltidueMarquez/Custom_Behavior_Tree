@@ -98,6 +98,14 @@ namespace Editor.View
             BehaviorTreeWindow.windowRoot.inspectorView.UpdateViewData();//更新Inspector视图的数据
         }
 
+        /// <summary>
+        /// 更新视图数据方法
+        /// </summary>
+        public void UpdateData()
+        {
+            title = NodeData.NodeName;
+        }
+        
         private void SetRoot(DropdownMenuAction obj) => BTSetting.GetSetting().SetRoot(NodeData);
 
         /// <summary>

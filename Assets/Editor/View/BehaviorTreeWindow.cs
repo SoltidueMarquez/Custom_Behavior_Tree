@@ -31,6 +31,14 @@ namespace Editor.View
         }
 
         /// <summary>
+        /// 启用时撤销添加刷新方法
+        /// </summary>
+        private void OnEnable()
+        {
+            Undo.undoRedoPerformed += RefreshWindow;
+        }
+
+        /// <summary>
         /// 窗口关闭时自动保存
         /// </summary>
         private void OnDestroy()
@@ -43,8 +51,13 @@ namespace Editor.View
         /// </summary>
         public void CreateGUI()
         {
+            InitWindow();
+        }
+
+        public void InitWindow()
+        {
             var id = BTSetting.GetSetting().TreeID;//获取树的ID用于加载树
-            var iGetBt = EditorUtility.InstanceIDToObject(id) as IGetBt;
+            var iGetBt = BTSetting.GetSetting().GetTree();
             
             windowRoot = this;
             var root = rootVisualElement;
@@ -57,10 +70,15 @@ namespace Editor.View
             inspectorView = root.Q<InspectorView>();//获取Inspector的视图
             treeView = root.Q<TreeView>();//获取树的视图
             if (iGetBt == null) return;//非空判定
-            if (iGetBt.GetRoot() == null) return;
-            CreateRoot(iGetBt.GetRoot());//创建树的节点
+            if (iGetBt.GetTree()?.rootNode == null) return;
+            CreateRoot(iGetBt.GetTree().rootNode);//创建树的节点
             //在所有节点创建完毕后开始连线，调用所有的节点连接自己的子集
             treeView.nodes.OfType<NodeView>().ForEach(n => n.LinkLine());
+            
+            //根据保存设置视图的各种设置，如位置、旋转、缩放等
+            var treeData = iGetBt.GetTree();
+            treeView.viewTransform.position = treeData.viewTransform.position;
+            treeView.viewTransform.scale = treeData.viewTransform.scale;
         }
 
         /// <summary>
@@ -68,7 +86,29 @@ namespace Editor.View
         /// </summary>
         public void Save()
         {
+            var treeData = BTSetting.GetSetting().GetTree().GetTree();
+            treeData.viewTransform = new GraphViewTransform();
+            //保存当前视图UI的各种信息，如位置、旋转、缩放等
+            treeData.viewTransform.position = treeView.viewTransform.position;
+            treeData.viewTransform.scale = treeView.viewTransform.scale;
             EditorSceneManager.SaveScene(SceneManager.GetActiveScene());//直接保存当前活动的场景
+        }
+
+        /// <summary>
+        /// 每秒刷新10次的一个Update
+        /// </summary>
+        private void OnInspectorUpdate()
+        {
+            treeView.nodes.OfType<NodeView>().ForEach(n => n.UpdateData()); //调用所有结节点的刷新
+        }
+
+        /// <summary>
+        /// 刷新方法
+        /// </summary>
+        public void RefreshWindow()
+        {
+            rootVisualElement.Clear();//先清空原有的
+            InitWindow();//重新初始化
         }
         
         /// <summary>

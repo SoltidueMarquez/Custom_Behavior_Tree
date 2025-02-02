@@ -398,104 +398,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1311272836
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1311272840}
-  - component: {fileID: 1311272839}
-  - component: {fileID: 1311272838}
-  - component: {fileID: 1311272837}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &1311272837
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311272836}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1311272838
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311272836}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1311272839
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311272836}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1311272840
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311272836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.47, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494086134
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,94 +445,270 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 1151521235}
+    - {fileID: 1822023750}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: TreeData
+      Entry: 7
+      Data: 0|BehaviorTree.BehaviorTreeData, Assembly-CSharp
     - Name: rootNode
       Entry: 7
-      Data: 0|BehaviorTree.Selector, Assembly-CSharp
+      Data: 1|BehaviorTree.Sequence, Assembly-CSharp
     - Name: Guid
       Entry: 1
-      Data: acd587bf-1567-4515-bed4-3db4d0315992
+      Data: d1c03057-ba40-496a-b3a4-da461940df0a
     - Name: Position
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -26.5999756
+      Data: 875.2
     - Name: 
       Entry: 4
-      Data: 38.3999939
+      Data: 133.800018
     - Name: 
       Entry: 8
       Data: 
     - Name: NodeName
       Entry: 1
-      Data: Selector
+      Data: "\u6839\u8282\u70B9-\u987A\u5E8F"
     - Name: ChildNodes
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.List`1[[BehaviorTree.BtNodeBase, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 4
     - Name: 
       Entry: 7
-      Data: 2|BehaviorTree.Delay, Assembly-CSharp
+      Data: 3|BehaviorTree.Delay, Assembly-CSharp
     - Name: Guid
       Entry: 1
-      Data: 637f0a41-3f87-49ed-9336-bd80f7f1e2d9
+      Data: eb048d55-aa62-4185-8678-01d0deeaf2c8
     - Name: Position
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 216.799988
+      Data: 1172
     - Name: 
       Entry: 4
-      Data: 339
+      Data: -43.19999
     - Name: 
       Entry: 8
       Data: 
     - Name: NodeName
       Entry: 1
-      Data: Delay
+      Data: "\u5EF6\u65F6\u8282\u70B9"
     - Name: ChildNode
       Entry: 7
-      Data: 3|BehaviorTree.SetObjectActive, Assembly-CSharp
+      Data: 4|BehaviorTree.SetObjectActive, Assembly-CSharp
     - Name: Guid
       Entry: 1
-      Data: 3917aec9-e787-47f2-a2ff-5051691c41f2
+      Data: 853274b1-2e7e-44e9-bf08-9e2f0d244375
     - Name: Position
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 419.2
+      Data: 1391.40027
     - Name: 
       Entry: 4
-      Data: 54.19998
+      Data: -43.2000046
     - Name: 
       Entry: 8
       Data: 
     - Name: NodeName
       Entry: 1
-      Data: SetObjectActive
+      Data: "\u65B9\u5757\u6D88\u5931"
     - Name: m_IsActive
       Entry: 5
       Data: false
     - Name: m_Particle
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
     - Name: m_Timer
       Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: 917bdd73-8307-4104-bb4a-ce655f588ba1
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1171.47754
+    - Name: 
+      Entry: 4
+      Data: 110.400017
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u5EF6\u65F6\u8282\u70B9"
+    - Name: ChildNode
+      Entry: 7
+      Data: 6|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: c41be14c-dd04-444c-9782-417b57c4077b
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1377.6001
+    - Name: 
+      Entry: 4
+      Data: 110.399994
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u65B9\u5757\u51FA\u73B0"
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: m_Particle
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: cd20074a-f2a4-41ff-a3b6-00b9c2ce80f6
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1172
+    - Name: 
+      Entry: 4
+      Data: 241.250015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u5EF6\u65F6\u8282\u70B9"
+    - Name: ChildNode
+      Entry: 7
+      Data: 8|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: 37c2e6c3-35da-4306-b884-ef54bb740f74
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1377.6001
+    - Name: 
+      Entry: 4
+      Data: 241.250015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u7403\u7403\u6D88\u5931"
+    - Name: m_IsActive
+      Entry: 5
+      Data: false
+    - Name: m_Particle
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|BehaviorTree.Delay, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: e163203d-76d9-42ad-812d-44c4de89c6bd
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1172
+    - Name: 
+      Entry: 4
+      Data: 377.4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u5EF6\u65F6\u8282\u70B9"
+    - Name: ChildNode
+      Entry: 7
+      Data: 10|BehaviorTree.SetObjectActive, Assembly-CSharp
+    - Name: Guid
+      Entry: 1
+      Data: a6a648d2-84e2-412d-b533-d95552faf955
+    - Name: Position
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1377.6001
+    - Name: 
+      Entry: 4
+      Data: 377.4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeName
+      Entry: 1
+      Data: "\u7403\u7403\u51FA\u73B0"
+    - Name: m_IsActive
+      Entry: 5
+      Data: true
+    - Name: m_Particle
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Timer
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -643,104 +721,117 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
---- !u!1 &1699179729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1699179733}
-  - component: {fileID: 1699179732}
-  - component: {fileID: 1699179731}
-  - component: {fileID: 1699179730}
-  m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &1699179730
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699179729}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &1699179731
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699179729}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1699179732
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699179729}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1699179733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699179729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87, y: -1.9787076, z: 0.63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+    - Name: viewTransform
+      Entry: 7
+      Data: 11|BehaviorTree.GraphViewTransform, Assembly-CSharp
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -631.2
+    - Name: 
+      Entry: 4
+      Data: 233.6
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: rotation
+      Entry: 7
+      Data: UnityEngine.Quaternion, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: scale
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8695652
+    - Name: 
+      Entry: 4
+      Data: 0.8695652
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: matrix
+      Entry: 7
+      Data: UnityEngine.Matrix4x4, UnityEngine.CoreModule
+    - Name: m00
+      Entry: 4
+      Data: 0
+    - Name: m10
+      Entry: 4
+      Data: 0
+    - Name: m20
+      Entry: 4
+      Data: 0
+    - Name: m30
+      Entry: 4
+      Data: 0
+    - Name: m01
+      Entry: 4
+      Data: 0
+    - Name: m11
+      Entry: 4
+      Data: 0
+    - Name: m21
+      Entry: 4
+      Data: 0
+    - Name: m31
+      Entry: 4
+      Data: 0
+    - Name: m02
+      Entry: 4
+      Data: 0
+    - Name: m12
+      Entry: 4
+      Data: 0
+    - Name: m22
+      Entry: 4
+      Data: 0
+    - Name: m32
+      Entry: 4
+      Data: 0
+    - Name: m03
+      Entry: 4
+      Data: 0
+    - Name: m13
+      Entry: 4
+      Data: 0
+    - Name: m23
+      Entry: 4
+      Data: 0
+    - Name: m33
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &1822023750
 GameObject:
   m_ObjectHideFlags: 0
