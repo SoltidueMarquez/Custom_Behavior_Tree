@@ -1,7 +1,10 @@
-
+using System.Collections.Generic;
+using System.Linq;
 using BehaviorTree;
 using Editor.View;
+using Sirenix.Serialization;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
 /// <summary>
 /// 扩展方法
@@ -46,5 +49,39 @@ public static class BTEx
                 precondition.ChildNode = null;
                 return;
         }
+    }
+    
+    /// <summary>
+    /// 用odin序列化去克隆选择的节点
+    /// </summary>
+    /// <param name="nodes"></param>
+    /// <returns></returns>
+    public static List<BtNodeBase> CloneData(this List<BtNodeBase> nodes)
+    {
+        var nodeBytes= SerializationUtility.SerializeValue(nodes, DataFormat.Binary);//使用奥丁的序列化方法，序列化为字节流
+        var toNode = SerializationUtility.DeserializeValue<List<BtNodeBase>>(nodeBytes ,DataFormat.Binary);
+            
+        //删掉未复制的子数据 并随机新的Guid 位置向右下偏移
+        for (int i = 0; i < toNode.Count; i++)
+        {
+            toNode[i].Guid = System.Guid.NewGuid().ToString();//节点id的唯一标识需要重新随机 
+            switch (toNode[i])
+            {
+                case BtComposite composite:
+                    if (composite.ChildNodes .Count==0)break;
+                    composite.ChildNodes = composite.ChildNodes.Intersect(toNode).ToList();//只保留当前选择的节点
+                    break;
+                case BtPrecondition precondition :
+                    if (precondition.ChildNode == null)break;
+                    if (!toNode.Exists(n => n == precondition.ChildNode))
+                    {
+                        precondition.ChildNode = null;
+                    }
+                    break;
+            }
+            toNode[i].Position += Vector2.one * 30;//将位置偏移一些
+        }
+            
+        return toNode;
     }
 }

@@ -45,6 +45,7 @@ namespace Editor.View
                     });
                     break;
                 case BtPrecondition precondition://条件节点于自己唯一的子节点连线
+                    if (precondition.ChildNode == null) return;//没有子节点则直接return
                     graphView.AddElement(PortLink(OutputPort, graphView.NodeViews[precondition.ChildNode.Guid].InputPort));
                     break;
             }

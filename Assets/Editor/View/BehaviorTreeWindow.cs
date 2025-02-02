@@ -6,7 +6,9 @@ using BehaviorTree;
 using Sirenix.Utilities;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Editor.View
@@ -26,6 +28,14 @@ namespace Editor.View
         public static void ShowExample()
         {
             BehaviorTreeWindow wnd = GetWindow<BehaviorTreeWindow>("BehaviorTreeWindow");   //自带的创建窗口的方法
+        }
+
+        /// <summary>
+        /// 窗口关闭时自动保存
+        /// </summary>
+        private void OnDestroy()
+        {
+            Save();
         }
 
         /// <summary>
@@ -53,6 +63,14 @@ namespace Editor.View
             treeView.nodes.OfType<NodeView>().ForEach(n => n.LinkLine());
         }
 
+        /// <summary>
+        /// 保存
+        /// </summary>
+        public void Save()
+        {
+            EditorSceneManager.SaveScene(SceneManager.GetActiveScene());//直接保存当前活动的场景
+        }
+        
         /// <summary>
         /// 通过创建根节点创建树
         /// </summary>

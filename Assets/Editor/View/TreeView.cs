@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using BehaviorTree;
+using Sirenix.Utilities;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -15,6 +16,8 @@ namespace Editor.View
     public class TreeView : GraphView
     {
         public Dictionary<string, NodeView> NodeViews = new Dictionary<string, NodeView>();//以节点id为索引的节点存储字典，方便查找
+
+        public List<BtNodeBase> copyNodes = new List<BtNodeBase>();
         public new class UxmlFactory : UxmlFactory<TreeView,UxmlTraits> { }
         public TreeView()
         {
@@ -31,13 +34,73 @@ namespace Editor.View
 
             graphViewChanged += OnGraphViewChanged;//添加连线委托
             RegisterCallback<MouseEnterEvent>(MouseEnterControl);//为鼠标点击注册器添加订阅事件
+            RegisterCallback<KeyDownEvent>(KeyDownEventCallback);//键盘事件回调订阅事件
+        }
+
+        private void KeyDownEventCallback(KeyDownEvent evt)
+        {
+            if (evt.keyCode == KeyCode.Tab)
+            {
+                evt.StopPropagation();
+            }
+
+            if (!evt.ctrlKey) return;
+            switch (evt.keyCode)
+            {
+                case KeyCode.S:
+                    BehaviorTreeWindow.windowRoot.Save();
+                    evt.StopPropagation();//按键信息停止向下传送，避免多次调用
+                    break;
+                case KeyCode.E:
+                    //OnStartMove();
+                    evt.StopPropagation();
+                    break;
+                case KeyCode.X:
+                    //Cut(null);
+                    evt.StopPropagation();
+                    break;
+                case KeyCode.C:
+                    Copy();
+                    evt.StopPropagation();
+                    break;
+                case KeyCode.V:
+                    Paste();
+                    evt.StopPropagation();
+                    break;
+            }
+        }
+
+
+        /// <summary>
+        /// 复制方法，使用序列化实现
+        /// </summary>
+        private void Copy() => copyNodes = selection.OfType<NodeView>()
+            .Select(n => n.NodeData)
+            .ToList()
+            .CloneData();
+
+        /// <summary>
+        /// 黏贴方法，使用反序列化实现
+        /// </summary>
+        private void Paste()
+        {
+            var nodePaste = new List<NodeView>();
+            for (int i = 0; i < copyNodes.Count; i++) //先生成
+            {
+                var nodeView = new NodeView(copyNodes[i]);
+                nodeView.SetPosition(new Rect(copyNodes[i].Position, Vector2.one));
+                this.AddElement(nodeView);
+                nodePaste.Add(nodeView);
+                NodeViews.Add(copyNodes[i].Guid, nodeView); //添加进字典
+            }
+            nodePaste.ForEach(n => n.LinkLine());//生成完毕后对所有节点重新连线
+            copyNodes = copyNodes.CloneData();//重新克隆待复制的节点，避免数据重复
         }
 
         /// <summary>
         /// 每次鼠标点击就会触发这个方法
         /// </summary>
         /// <param name="evt"></param>
-        /// <exception cref="NotImplementedException"></exception>
         private void MouseEnterControl(MouseEnterEvent evt)
         {
             BehaviorTreeWindow.windowRoot.inspectorView.UpdateViewData();
